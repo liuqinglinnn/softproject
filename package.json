@@ -1,0 +1,17 @@
+{
+    "name": "electronapp",
+    "version": "1.0.0",
+    "description": "to calculate",
+    "main": "main.js",
+    "scripts": {
+        "test": "jest",
+        "start": "electron .",
+        "package-win": "electron-packager calculate --platform=win32 --electron-version=10.0.0 --arch=x64 --download.mirrorOptions.mirror=https://npm.taobao.org/mirrors/electron/ --asar --app-version=0.0.0 --build-version=0.0.0 --out=./calculate --overwrite --no-package-manager  "
+    },
+    "devDependencies": {
+        "electron": "^26.2.2",
+        "electron-packager": "^17.1.2"
+    },
+    "author": "lql",
+    "license": "ISC"
+}

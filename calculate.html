@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>102101115刘庆林</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: "微软雅黑", sans-serif;
+			text-align: center;
+		}
+
+		.content {
+			width: 400px;
+			margin: 0 auto;
+			padding: 20px;
+			border-radius: 10px;
+			background-color: antiquewhite;
+		}
+
+		.clear,
+		.number,
+		.symbol,
+		.calculate {
+			margin-top: 10px;
+			font-size: xx-large;
+			border-radius: 50%;
+			width: 50px;
+			height: 50px;
+			line-height: 50px;
+			background-color: #FFE4C4;
+			cursor: pointer;
+		}
+
+		.calculate {
+			background-color: #888888;
+			color: white;
+		}
+
+		.content input:hover {
+			box-shadow: 5px 5px 5px #888888;
+		}
+
+		#result {
+			margin-top: 10px;
+			font-size: 16px;
+			width: 60%;
+			height: 50px;
+			text-align: left;
+			border-radius: 20px;
+			background-color: #FFE4C4;
+			padding: 5px 10px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="banner">
+		<h2>计算器</h2>
+	</div>
+	<div class="content">
+		<input type="text" id="result" readonly="readonly" placeholder="运算结果显示" />
+		<input type="button" value="C" class="clear" onclick="clearValue()" />
+		<input type="button" value="⬅" class="clear" onclick="back()" />
+		<br />
+		<br />
+		<input type="button" class="symbol" style="font-size:20px" id="square" onclick="square()" value="x^2" />
+		<input type="button" class="symbol" style="font-size:20px" id="cube" onclick="cube()" value="x^3" />
+		<input type="button" value="1" class="number" onclick="get(this.value,'num')" />
+		<input type="button" value="2" class="number" onclick="get(this.value,'num')" />
+		<input type="button" value="3" class="number" onclick="get(this.value,'num')" />
+		<input type="button" value="+" class="symbol" onclick="get(this.value,'sym')" />
+		<br />
+		<input type="button" class="symbol" style="font-size:20px" onclick="sqrt()" value="√" />
+		<input type="button" class="symbol" style="font-size:20px" onclick="cbrt()" value="³√" />
+		<input type="button" value="4" class="number" onclick="get(this.value,'num')" />
+		<input type="button" value="5" class="number" onclick="get(this.value,'num')" />
+		<input type="button" value="6" class="number" onclick="get(this.value,'num')" />
+		<input type="button" value="-" class="symbol" onclick="get(this.value,'sym')" />
+		<br />
+		<input type="button" class="symbol" style="font-size:20px" onclick="sin()" value="sin" />
+		<input type="button" class="symbol" style="font-size:20px" onclick="cos()" value="cos" />
+		<input type="button" value="7" class="number" onclick="get(this.value,'num')" />
+		<input type="button" value="8" class="number" onclick="get(this.value,'num')" />
+		<input type="button" value="9" class="number" onclick="get(this.value,'num')" />
+		<input type="button" value="*" class="symbol" onclick="get(this.value,'sym')" />
+		<br />
+		<input type="button" class="symbol" style="font-size:20px" onclick="tan()" value="tan" />
+		<input type="button" class="symbol" style="font-size:20px" onclick="cal('^')" value="^" />
+		<input type="button" value="0" class="number" onclick="get(this.value,'num')" />
+		<input type="button" value="." class="symbol" onclick="get(this.value,'sym')" />
+		<input type="button" value="/" class="symbol" onclick="get(this.value,'sym')" />
+		<input type="button" value="=" class="calculate" onclick="calculate()" />
+	</div>	
+	<script src="./calculate.js"  type="text/javascript"></script>
+</body>
+
+</html>
