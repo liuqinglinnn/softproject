@@ -1,4 +1,3 @@
-console.log(123);
 let resultField = document.getElementById("result");
 let end = false
 function clearValue() {

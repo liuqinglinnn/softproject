@@ -3,8 +3,7 @@
 作业基本信息
 
 ## Gitcode项目地址	
-
-
+https://github.com/liuqinglinnn/softproject.git
 
 ## PSP表格
 
@@ -162,7 +161,21 @@ package.json
     "license": "ISC"
 }
 ```
+```
+npm install --save-dev @electron-forge/cli
+npx electron-forge import
 
+✔ Checking your system
+✔ Initializing Git Repository
+✔ Writing modified package.json file
+✔ Installing dependencies
+✔ Writing modified package.json file
+✔ Fixing .gitignore
+
+We have ATTEMPTED to convert your app to be in a format that electron-forge understands.
+
+Thanks for using "electron-forge"!!!
+```
 
 
 ## 接口设计和实现过程
@@ -283,18 +296,11 @@ package.json
 
 
 ## 性能改进
-
- 计算时调用js库函数。
-
-![image-20230927170506617](C:\Users\57270\AppData\Roaming\Typora\typora-user-images\image-20230927170506617.png)
-
- 代码覆盖率达到100%
-
+前端函数部分基本都是调用js的math库，基本为最优执行方案
 ## 单元测试
-
- 
-
- 
+前端单元测试，我确实找不到一个很好的方案，尝试过了jest插件，但是实现过程中，js函数需要对dom进行操作，测试类编写实在超过我的能力范围
+只能用idea自带的调试器配合前端log日志，对代码覆盖率进行检测
+![img.png](img.png)
 
 ## 异常处理
 
@@ -331,4 +337,4 @@ package.json
 
 ## 心得体会
 
- 利用前端三件套实现了一个计算器的简易功能，对前端有了更加深入的了解。
+ 利用前端三件套实现了一个计算器的简易功能，对前端有了更加深入的了解。同时使用了npm包管理相关工具对计算器进行了打包操作，使文件能够在windows上运行，期间查看了很多官方文档，对前端开发流程有了一个初步的认识

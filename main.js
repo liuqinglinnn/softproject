@@ -14,7 +14,7 @@ function createWindow() {
         }
     })
     // 并且为你的应用加载index.html
-    win.loadFile('calculate.html')
+    win.loadURL('file://'+__dirname+'/calculate.html');//__dirname当前路径
 
     Menu.setApplicationMenu(null) //取消菜单栏
     // 打开开发者工具
